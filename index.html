@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深海迷航2 异星水域 v0.10.3 全DLC解压即玩 中文免steam 单机网盘不限速</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+        
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        
+        .download-btn-nav {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn-nav:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 2rem;
+            background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.7) 150%);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .screenshots {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .screenshot {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            aspect-ratio: 16/9;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        
+        .screenshot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .download-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: rgba(0, 0, 0, 0.3);
+        }
+        
+        .download-btn {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            border: none;
+            padding: 1.5rem 3rem;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .disclaimer {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features, .screenshots, .download-section {
+                padding: 2rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <nav>
+            <div class="logo">游戏下载站</div>
+            <div class="nav-links">
+                <a href="#features">游戏特色</a>
+                <a href="#screenshots">游戏截图</a>
+                <button class="download-btn-nav" onclick="handleDownload()">立即下载</button>
+            </div>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <h1>深海迷航2 异星水域 v0.10.3</h1>
+        <p class="subtitle">全DLC解压即玩 中文免steam 单机网盘不限速</p>
+        <div class="game-info">
+            <p>容量：14.5GB | 语言：官方简体中文 | 支持：键盘.鼠标.手柄</p>
+            <p>推荐配置：Win11 64位 | i7-13700 | 16GB RAM | RTX 3070</p>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <div class="feature-card">
+            <div class="feature-icon">🌊</div>
+            <h3 class="feature-title">水下生存冒险</h3>
+            <p>在外星世界中进行深度探索，建造基地，制作工具，适应环境求生。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3 class="feature-title">多人合作</h3>
+            <p>支持最多四人联机合作，与好友共同探索深海中的未知秘密。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🔍</div>
+            <h3 class="feature-title">解谜探索</h3>
+            <p>揭开深海中隐藏的谜团，发现外星世界的惊人真相。</p>
+        </div>
+        <div class="feature-card">
+            <div class="feature-icon">🎮</div>
+            <h3 class="feature-title">全平台支持</h3>
+            <p>支持键盘、鼠标、手柄操作，提供最佳游戏体验。</p>
+        </div>
+    </section>
+
+    <section id="screenshots" class="screenshots">
+        <h2 style="text-align: center; margin-bottom: 2rem;">游戏截图</h2>
+        <div class="gallery">
+            <div class="screenshot">
+                <img src="images/1.jpg" alt="游戏截图1">
+            </div>
+            <div class="screenshot">
+                <img src="images/2.jpg" alt="游戏截图2">
+            </div>
+            <div class="screenshot">
+                <img src="images/3.jpg" alt="游戏截图3">
+            </div>
+        </div>
+    </section>
+
+    <section class="download-section">
+        <h2>准备开始你的深海冒险了吗？</h2>
+        <p>点击下方按钮获取游戏下载链接</p>
+        <button class="download-btn" onclick="handleDownload()">🚀 立即下载</button>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 游戏下载站. 保留所有权利.</p>
+        <p class="disclaimer">本站仅供游戏交流与预览，请支持正版游戏</p>
+    </footer>
+
+    <script>
+        // 防爬取机制 - 动态生成下载链接
+        function generateDownloadLink() {
+            // 将真实链接进行简单的字符串处理
+            const encodedUrl = "aHR0cHM6Ly93d3cuZ2FtZXR1YW4udG9wLzM0MDMu";
+            const suffix = "html";
+            
+            // 解码并组合完整链接
+            try {
+                const decoded = atob(encodedUrl) + suffix;
+                return decoded;
+            } catch (e) {
+                console.error('解码失败:', e);
+                return null;
+            }
+        }
+
+        function handleDownload() {
+            const downloadUrl = generateDownloadLink();
+            
+            if (downloadUrl) {
+                // 添加一些延迟来增加爬取难度
+                setTimeout(() => {
+                    window.location.href = downloadUrl;
+                }, 1000);
+                
+                // 显示提示信息
+                showDownloadPrompt();
+            } else {
+                alert('下载链接获取失败，请稍后重试');
+            }
+        }
+
+        function showDownloadPrompt() {
+            const promptDiv = document.createElement('div');
+            promptDiv.innerHTML = `
+                <div style="
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: rgba(0,0,0,0.9);
+                    color: white;
+                    padding: 2rem;
+                    border-radius: 10px;
+                    z-index: 10000;
+                    text-align: center;
+                    border: 2px solid #ffd700;
+                ">
+                    <h3>⚠️ 重要提示</h3>
+                    <p>下载即将开始...</p>
+                    <p>请确保您的设备满足游戏配置要求</p>
+                    <button onclick="this.parentElement.parentElement.remove()" 
+                            style="margin-top: 1rem; padding: 0.5rem 1rem; background: #ff6b6b; border: none; border-radius: 5px; color: white; cursor: pointer;">
+                        关闭
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(promptDiv);
+        }
+
+        // 防止右键查看源码
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('为了保护游戏资源，右键功能已被禁用');
+        });
+
+        // 防止F12开发者工具
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
+                e.preventDefault();
+                alert('为了保护游戏资源，开发者工具已被禁用');
+            }
+        });
+    </script>
+</body>
+</html>
